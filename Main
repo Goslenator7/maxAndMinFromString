@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Kata {
+  public static String highAndLow(String numbers) {
+    // Code here or
+    // Convert String into array split by whitespace
+    String nums[] = numbers.split(" ");
+    // Create empty ArrayList
+    ArrayList<Integer> numbs = new ArrayList<Integer>();
+    
+    // Loop through each entry in String array and convert to int
+    for (String tempString : nums) {
+      int n = Integer.parseInt(tempString);
+      numbs.add(n);
+    }
+    
+    // Find max and min values in int ArrayList
+    int min = Collections.min(numbs);
+    int max = Collections.max(numbs);
+    
+    // Print out the max and the min
+    return (max+" "+min);
+  }
+}
